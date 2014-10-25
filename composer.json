@@ -9,6 +9,7 @@
 	],
 	"require": {
 		"php": ">=5.5",
+		"illuminate/support": ">4",
 		"atrauzzi/domain-tool": "dev-master"
 	},
 	"autoload": {
