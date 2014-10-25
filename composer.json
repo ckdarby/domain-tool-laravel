@@ -1,0 +1,20 @@
+{
+	"name": "atrauzzi/domain-tool-laravel",
+	"description": "Laravel integration for the domain-tool utility library.",
+	"authors": [
+		{
+			"name": "Alexander Trauzzi",
+			"email": "atrauzzi@gmail.com"
+		}
+	],
+	"require": {
+		"php": ">=5.5",
+		"atrauzzi/domain-tool": "dev-master"
+	},
+	"autoload": {
+		"psr-4": {
+			"Atrauzzi\\DomainTool\\Laravel\\": "src/"
+		}
+	},
+	"minimum-stability": "dev"
+}
