@@ -14,7 +14,7 @@
 		 */
 		public function register() {
 
-			$this->package('atrauzzi/domain-tool-laravel');
+			$this->package('atrauzzi/domain-tool');
 
 			DomainTool::setMaker([$this->app, 'make']);
 			DomainTool::setProfileLoader($this->app->make('Atrauzzi\DomainTool\Laravel\ProfileLoader'));

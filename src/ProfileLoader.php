@@ -24,7 +24,7 @@
 		 */
 		public function getProfile($type, $profileName = null) {
 
-			$namedProfile = $this->config->get(sprintf('domain-tool-laravel::%s.%s', $profileName, $type), null);
+			$namedProfile = $this->config->get(sprintf('domain-tool::%s.%s', $profileName, $type), null);
 
 			// Invalid or no profile.
 			if(!is_array($namedProfile)) {
@@ -40,11 +40,11 @@
 			}
 			// When a profile is loaded, mix in defaults (when available).
 			else {
-				$default = $this->config->get(sprintf('domain-tool-laravel::default.%s', $type), []);
+				$default = $this->config->get(sprintf('domain-tool::default.%s', $type), []);
 			}
 
 			return array_replace_recursive(
-				$this->config->get('domain-tool-laravel::all', []),
+				$this->config->get('domain-tool::all', []),
 				$default,
 				$namedProfile
 			);
