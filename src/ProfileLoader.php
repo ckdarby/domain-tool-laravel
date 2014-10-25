@@ -1,11 +1,11 @@
 <?php namespace Atrauzzi\DomainTool\Laravel {
 
-	use Atrauzzi\DomainTool\ProfileLoader as Base;
+	use Atrauzzi\DomainTool\ProfileLoader as ProfileLoaderContract;
 	//
 	use Illuminate\Config\Repository as Config;
 
 
-	class ProfileLoader implements Base {
+	class ProfileLoader implements ProfileLoaderContract {
 
 		/** @var \Illuminate\Config\Repository */
 		protected $config;
@@ -32,16 +32,22 @@
 				// But we wanted one...
 				if($profileName)
 					return null;
+
 				// No big!
-				else
-					$namedProfile = [];
+				$namedProfile = [];
+				$default = [];
 
 			}
+			// When a profile is loaded, mix in defaults (when available).
+			else {
+				$default = $this->config->get(sprintf('domain-tool-laravel::default.%s', $type), []);
+			}
 
-			$all = $this->config->get('domain-tool-laravel::all', []);
-			$default = $this->config->get(sprintf('domain-tool-laravel::default.'), []);
-
-			return array_replace_recursive($all, $default, $namedProfile);
+			return array_replace_recursive(
+				$this->config->get('domain-tool-laravel::all', []),
+				$default,
+				$namedProfile
+			);
 
 		}
 

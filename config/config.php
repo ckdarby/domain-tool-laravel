@@ -1,15 +1,38 @@
 <?php return [
 
-	// Global profile settings.
+	// Global profile settings, applies to all types, always (even when no profile is requested).
 	'all' => [
-		'adapter' => 'Atrauzzi\DomainTool\Model\Adapter\GetSet',
+
+		/*
+		 * Global default model adapter.
+		 *
+		 * Can be:
+		 * 		- Atrauzzi\DomainTool\Model\Adapter\AutoGetSet
+		 * 		- Atrauzzi\DomainTool\Model\Adapter\GetSet
+		 * 		- Atrauzzi\DomainTool\Laravel\ModelAdapter
+		 * 		- Any other, supplied by another integration library.
+		 *
+		 * This file by default specifies the Eloquent model adapter.  If removed, Domain Tool
+		 * will default to using the AutoGetSet adapter.
+		 *
+		 */
+		'adapter' => 'Atrauzzi\DomainTool\Laravel\ModelAdapter',
+
 	],
 
 	// Default profiles, per type.
 	'default' => [
 
+		/*
+		 * Default Profiles
+		 *
+		 * If several of your profiles contain similar instructions for a specific class, you
+		 * can avoid that duplication here.  Keep in mind, when no profile is requested, default
+		 * does not get applied.
+		 *
 		'Path\To\Class' => [
 		],
+		 */
 
 	],
 
