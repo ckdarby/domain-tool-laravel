@@ -8,7 +8,8 @@
 	class ServiceProvider extends Base {
 
 		public function boot() {
-			$this->package('atrauzzi/domain-tool-laravel', 'domain-tool');
+			// ToDo: Fix composer.json's namespacing when L5 settles on package config conventions!
+			$this->package('atrauzzi/domain-tool-laravel');
 		}
 
 		/**
