@@ -14,7 +14,7 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"Atrauzzi\\DomainToolLaravel\\": "src/"
+			"Atrauzzi\\DomainToolLaravel\\": "src/Atrauzzi/DomainToolLaravel/"
 		}
 	},
 	"minimum-stability": "dev"
