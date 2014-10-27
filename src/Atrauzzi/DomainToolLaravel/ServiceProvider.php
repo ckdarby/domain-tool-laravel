@@ -1,4 +1,4 @@
-<?php namespace Atrauzzi\DomainTool\Laravel {
+<?php namespace Atrauzzi\DomainToolLaravel {
 
 	use Illuminate\Support\ServiceProvider as Base;
 	//
@@ -20,7 +20,7 @@
 		public function register() {
 
 			DomainTool::setMaker([$this->app, 'make']);
-			DomainTool::setProfileLoader($this->app->make('Atrauzzi\DomainTool\Laravel\ProfileLoader'));
+			DomainTool::setProfileLoader($this->app->make('Atrauzzi\DomainToolLaravel\ProfileLoader'));
 
 		}
 

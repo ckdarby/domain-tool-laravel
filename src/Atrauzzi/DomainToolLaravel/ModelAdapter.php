@@ -1,4 +1,4 @@
-<?php namespace Atrauzzi\DomainTool\Laravel {
+<?php namespace Atrauzzi\DomainToolLaravel {
 
 	use Atrauzzi\DomainTool\Model\Adapter\Contract as ModelAdapterContract;
 
