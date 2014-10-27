@@ -7,6 +7,10 @@
 
 	class ServiceProvider extends Base {
 
+		public function boot() {
+			$this->package('atrauzzi/domain-tool-laravel', 'domain-tool');
+		}
+
 		/**
 		 * Register the service provider.
 		 *
@@ -14,7 +18,7 @@
 		 */
 		public function register() {
 
-			$this->package('atrauzzi/domain-tool');
+			$this->package('atrauzzi/domain-tool-laravel', 'domain-tool');
 
 			DomainTool::setMaker([$this->app, 'make']);
 			DomainTool::setProfileLoader($this->app->make('Atrauzzi\DomainTool\Laravel\ProfileLoader'));
