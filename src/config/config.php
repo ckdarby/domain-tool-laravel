@@ -16,9 +16,14 @@
 		'adapter' => 'Atrauzzi\DomainToolLaravel\ModelAdapter',
 
 		/*
-		 * External values will be in snake_case.
+		 * Outbound values should be in snake_case.
 		 */
-		'snake_out' => true
+		'snake_out' => true,
+
+		/**
+		 * Inbound values will be in snake_case.
+		 */
+		'snake_in' => true,
 
 	],
 
