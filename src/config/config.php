@@ -16,7 +16,7 @@
 		 * will default to using the AutoGetSet adapter.
 		 *
 		 */
-		'adapter' => 'Atrauzzi\DomainTool\Laravel\ModelAdapter',
+		'adapter' => 'Atrauzzi\DomainToolLaravel\ModelAdapter',
 
 	],
 
