@@ -12,11 +12,13 @@
 		 * 		- Atrauzzi\DomainTool\Laravel\ModelAdapter
 		 * 		- Any other, supplied by another integration library.
 		 *
-		 * This file by default specifies the Eloquent model adapter.  If removed, Domain Tool
-		 * will default to using the AutoGetSet adapter.
-		 *
 		 */
 		'adapter' => 'Atrauzzi\DomainToolLaravel\ModelAdapter',
+
+		/*
+		 * External values will be in snake_case.
+		 */
+		'snake_out' => true
 
 	],
 
