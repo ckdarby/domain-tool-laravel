@@ -25,6 +25,11 @@
 		 */
 		'snake_in' => true,
 
+		/**
+		 * Include a type attribute when dumping.
+		 */
+		'include_type' => true,
+
 	],
 
 	// Default profiles, per type.
@@ -53,6 +58,9 @@
 
 			// When absent/empty, defaults to AutoGetSet adapter with underscore output.
 			'adapter' => 'Path\To\AdapterImpl',
+
+			// You can override the PHP fully qualified name that's generated if desired.
+			// 'include_type' => 'flat_external_name',
 
 			// Similar to L4's "fillable" array on models, but supports mapping.
 			// When absent/empty, all attributes can be set.
